@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Épico - Productora Audiovisual</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'ClassyMarisa';
+      src: url('fonts/ClassyMarisa-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/slider.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="slider">
+      <div class="slide"><img src="img/bg1.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="img/bg2.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="img/bg3.jpg" alt="Slide 3"></div>
+    </div>
+    <h1 class="animated-text">Épico - Capturamos tus momentos inolvidables</h1>
+    <a href="#contacto" class="cta">Reserva ahora</a>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+      <div class="card"> <h3>Bodas</h3> <p>Cobertura completa de tu gran día.</p> </div>
+      <div class="card"> <h3>Empresariales</h3> <p>Videos e imágenes para tu empresa.</p> </div>
+      <div class="card"> <h3>Cumpleaños</h3> <p>Captura cada momento especial.</p> </div>
+    </div>
+  </section>
+
+  <section class="portafolio" id="portafolio">
+    <h2>Portafolio</h2>
+    <div class="imagenes">
+      <img src="img/foto1.jpg" alt="Evento 1" class="img-animada">
+      <img src="img/foto2.jpg" alt="Evento 2" class="img-animada">
+      <img src="img/foto3.jpg" alt="Evento 3" class="img-animada">
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>Síguenos en 
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Épico Productora - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    $('nav a').on('click', function(e){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>
